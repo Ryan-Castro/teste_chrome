@@ -1,0 +1,21 @@
+{
+    "name":"Teste",
+    "version":"0.0.1",
+    "description":"Pequeno projeto de estudos para mudar a cor dos titulos do youtube",
+    "action":{
+        "default_popup": "popup/index.html"
+    },
+    "manifest_version":3,
+    "content_scripts":[
+        {
+            "matches": ["https://www.youtube.com/"],
+            "js": ["popup/src/scripts/content.js"]
+        }
+    ],
+    "host_permissions": [
+        "https://www.youtube.com/"
+    ],
+    "permissions":[
+        "tabs"
+    ]
+}
